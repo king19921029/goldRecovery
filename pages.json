@@ -1,0 +1,85 @@
+{
+	"pages": [{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"enablePullDownRefresh": true
+			}
+		},
+
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+
+		{
+			"path": "pages/myGold/myGold",
+			"style": {
+				"navigationBarTitleText": "我有黄金"
+			}
+		}
+
+	],
+	"subPackages": [{
+			"root": "homePage",
+			"pages": [{
+				"path": "details/details",
+				"style": {
+					"navigationBarTitleText": "基本信息"
+				}
+			}]
+		},
+		{
+			"root": "goldPage",
+			"pages": []
+		},
+		{
+			"root": "minePage",
+			"pages": [{
+					"path": "getUserInfo/getUserInfo",
+					"style": {
+						"navigationBarTitleText": "授权登录"
+					}
+				}, {
+					"path": "testLogin/testLogin",
+					"style": {
+						"navigationBarTitleText": "登录"
+					}
+				}
+			]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "元气家政",
+		"navigationBarBackgroundColor": "#B896C2",
+		"backgroundColor": "#F2F2F2"
+	},
+	"tabBar": {
+		"color": "#666666",
+		"selectedColor": "#B896C2",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [{
+				"iconPath": "/static/imgs/home.png",
+				"selectedIconPath": "/static/imgs/home_act.png",
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"iconPath": "/static/imgs/peixun.png",
+				"selectedIconPath": "/static/imgs/peixun_act.png",
+				"pagePath": "pages/myGold/myGold",
+				"text": "我有黄金"
+			},
+			{
+				"iconPath": "/static/imgs/me.png",
+				"selectedIconPath": "/static/imgs/me_act.png",
+				"pagePath": "pages/mine/mine",
+				"text": "我的"
+			}
+		]
+	}
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') ||
+                CSS.supports('top: constant(a)'))
+            document.write(
+                '<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' +
+                (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"]::-webkit-search-cancel-button {
+                display: none;
+            }
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"servicePersion","entryPagePath":"pages/index/index.html","page":{"pages/index/index.html":{"window":{"navigationBarTitleText":"首页","enablePullDownRefresh":true,"usingComponents":{}}},"pages/group/group.html":{"window":{"navigationBarTitleText":"沟通","usingComponents":{"uni-swipe-action":"/comps/uni/uni-swipe-action/uni-swipe-action"}}},"pages/mine/mine.html":{"window":{"navigationBarTitleText":"我的","usingComponents":{}}},"pages/study/study.html":{"window":{"navigationBarTitleText":"培训","usingComponents":{}}},"homePage/details/details.html":{"window":{"navigationBarTitleText":"基本信息","usingComponents":{}}},"groupPage/group/group.html":{"window":{"navigationBarTitleText":"群组","usingComponents":{}}},"minePage/getUserInfo/getUserInfo.html":{"window":{"navigationBarTitleText":"授权登录","usingComponents":{}}},"minePage/testLogin/testLogin.html":{"window":{"navigationBarTitleText":"登录","usingComponents":{}}},"minePage/addressbook/addressbook.html":{"window":{"navigationBarTitleText":"通讯录","usingComponents":{}}},"minePage/IMmore/IMmore.html":{"window":{"navigationBarTitleText":"群聊","usingComponents":{"chat":"/comps/chat/chat"}}},"minePage/IMone/IMone.html":{"window":{"navigationBarTitleText":"单聊","usingComponents":{"chat":"/comps/chat/chat"}}}},"global":{"window":{"navigationBarTextStyle":"white","navigationBarTitleText":"元气家政","navigationBarBackgroundColor":"#B896C2","backgroundColor":"#F2F2F2"}},"tabBar":{"color":"#666666","selectedColor":"#B896C2","backgroundColor":"#FFFFFF","borderStyle":"black","list":[{"iconPath":"/static/imgs/home.png","selectedIconPath":"/static/imgs/home_act.png","pagePath":"pages/index/index.html","text":"首页"},{"iconPath":"/static/imgs/goutong.png","selectedIconPath":"/static/imgs/goutong_act.png","pagePath":"pages/group/group.html","text":"沟通"},{"iconPath":"/static/imgs/peixun.png","selectedIconPath":"/static/imgs/peixun_act.png","pagePath":"pages/study/study.html","text":"培训"},{"iconPath":"/static/imgs/me.png","selectedIconPath":"/static/imgs/me_act.png","pagePath":"pages/mine/mine.html","text":"我的"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/index/index","pages/group/group","pages/mine/mine","pages/study/study","homePage/details/details","groupPage/group/group","minePage/getUserInfo/getUserInfo","minePage/testLogin/testLogin","minePage/addressbook/addressbook","minePage/IMmore/IMmore","minePage/IMone/IMone"],"nvueCompiler":"uni-app","renderer":"auto","splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"2.4.2","usingComponents":{}}
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                var wxss = page.replace('.html', '.wxss')
+                if (
+                    typeof __wxAppCode__ !== 'undefined' &&
+                    __wxAppCode__.hasOwnProperty(wxss)
+                ) {
+                    var setCssToHead = __wxAppCode__[wxss]
+                    typeof setCssToHead === 'function' && setCssToHead()
+                    document.dispatchEvent(new CustomEvent("generateFuncReady", {
+                        detail: {
+                            generateFunc: $gwx(page.replace('.html', '.wxml'))
+                        }
+                    }));
+                } else {
+                    plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+                }
+            };
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

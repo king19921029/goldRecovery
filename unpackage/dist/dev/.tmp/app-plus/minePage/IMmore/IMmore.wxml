@@ -1,0 +1,1 @@
+<view><chat vue-id="1" username="{{username}}" chatType="chatRoom" bind:__l="__l"></chat></view>

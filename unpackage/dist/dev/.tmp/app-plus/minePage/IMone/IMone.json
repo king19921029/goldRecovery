@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "单聊",
+  "usingComponents": {
+    "chat": "/comps/chat/chat"
+  }
+}
